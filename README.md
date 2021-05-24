@@ -6,9 +6,6 @@
 Button 및 TextView 와 같은 Component에<br>
 Outline 및 Border에 진행중인것을 알리고 싶을때 사용 <br>
 
-<br>
-<br>
-
 ```xml
     <com.jjg.borderanimview.BorderAnimView
         android:layout_width="300dp"
@@ -29,3 +26,17 @@ Outline 및 Border에 진행중인것을 알리고 싶을때 사용 <br>
 `app:min_height="150dp"` 해당 Component의 최소 높이<br>
 `app:text_size="10dp"` 텍스트 size<br>
 `app:text_color="#0083ff"` 텍스트 색상<br>
+<hr>
+
+`
+dependencies {
+    implementation 'com.github.J-Jun0801:BorderAnimView:v0.0.1'
+}
+`
+`
+allprojects {
+     repositories {
+         maven { url "https://jitpack.io" }
+     }
+ }
+ `
