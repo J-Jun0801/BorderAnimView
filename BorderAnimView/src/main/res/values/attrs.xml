@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BorderAnimView">
+        <attr name="move_icon" format="integer" />
+
+        <attr name="stroke_width" format="dimension" />
+        <attr name="stroke_color" format="color" />
+
+        <attr name="text" format="string" />
+        <attr name="text_size" format="dimension" />
+        <attr name="text_color" format="color" />
+        <attr name="bg" format="integer" />
+
+        <attr name="min_height" format="dimension" />
+
+        <attr name="isLoop" format="boolean" />
+        <attr name="android:fontFamily" />
+    </declare-styleable>
+</resources>
