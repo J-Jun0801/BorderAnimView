@@ -93,6 +93,7 @@ class BorderView : View {
             invalidate()
         } else {
             distance = 0f
+            invalidate()
             // distance = 300;
         }
         canvas.drawBitmap(moveIcon!!, iconMatrix!!, null)
