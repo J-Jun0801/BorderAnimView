@@ -30,6 +30,7 @@ Outline 및 Border에 진행중인것을 알리고 싶을때 사용 <br>
 사용법<br>
 Project : Project Name<br>
 build.gradle<br>
+
 `
 dependencies {
     implementation 'com.github.J-Jun0801:BorderAnimView:v0.0.1'
@@ -38,6 +39,7 @@ dependencies {
 <br>
 Module : Project Name<br>
 build.gradle<br>
+
 `
 allprojects {
      repositories {
