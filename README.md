@@ -8,6 +8,5 @@ Outline 및 Border에 진행중인것을 알리고 싶을때 사용 <br>
 
 <br>
 <br>
-값 | 의미
---------------	| --------------
-app:move_icon	| 움직이는 아이콘
+`안녕하세요`
+움직이는 icon (drawable)<br>
