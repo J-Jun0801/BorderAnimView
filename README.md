@@ -37,6 +37,8 @@ dependencies {
 }
 `
 <br>
+<br>
+
 Module : Project Name<br>
 build.gradle<br>
 
