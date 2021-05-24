@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'com.github.dcendents.android-maven'
 }
 
 android {
@@ -44,4 +45,4 @@ dependencies {
 }
 
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.J-Jun0801'
+group='com.github.wkdwnsrb0801'
