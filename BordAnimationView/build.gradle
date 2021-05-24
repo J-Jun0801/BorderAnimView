@@ -45,4 +45,4 @@ dependencies {
 }
 
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.wkdwnsrb0801'
+group='com.github.J-Jun0801'

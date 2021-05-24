@@ -10,7 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/BorderAnimView" />
+            <option value="$PROJECT_DIR$/BordAnimationView" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
