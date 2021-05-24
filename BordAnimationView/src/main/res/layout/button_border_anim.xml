@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <com.jjg.borderanimbutton.view.BorderView
+    <com.jjg.borderanimview.BorderView
         android:id="@+id/border_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
