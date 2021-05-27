@@ -15,6 +15,7 @@ class BorderView : View {
     var WIDTH = dpToPx(context, 300).toInt()
     var HEIGHT = dpToPx(context, 100).toInt()
 
+    var isLoop = false
     private val RADIUS = HEIGHT / 2
     private var borderPaint = Paint(Paint.ANTI_ALIAS_FLAG)
 
@@ -41,7 +42,7 @@ class BorderView : View {
 
     constructor(context: Context) : super(context) {}
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
-        initView(attrs)
+        initView()
     }
 
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
@@ -49,15 +50,15 @@ class BorderView : View {
         attrs,
         defStyleAttr
     ) {
-        initView(attrs)
+        initView()
     }
 
-    private fun initView(attrs: AttributeSet) {
-        initPaint(attrs)
+    private fun initView() {
+        initPaint()
         initBorder()
     }
 
-    private fun initPaint(set: AttributeSet) {
+    private fun initPaint() {
         borderPaint!!.color = Color.BLACK
         borderPaint!!.style = Paint.Style.STROKE
         borderPaint!!.strokeWidth = 3f
@@ -70,7 +71,7 @@ class BorderView : View {
             MARGIN_LEFT.toFloat(),
             MARGIN_TOP.toFloat(),
             (WIDTH - MARGIN_RIGHT).toFloat(),
-            (HEIGHT +MARGIN_BOTTOM).toFloat()
+            (HEIGHT + MARGIN_BOTTOM).toFloat()
         )
         borderPath!!.addRoundRect(rect, RADIUS.toFloat(), RADIUS.toFloat(), Path.Direction.CW)
 
@@ -93,17 +94,18 @@ class BorderView : View {
             invalidate()
         } else {
             distance = 0f
-            invalidate()
-            // distance = 300;
+
+            if (isLoop)
+                invalidate()
         }
         canvas.drawBitmap(moveIcon!!, iconMatrix!!, null)
     }
 
-    fun setStrokeWidth(borderWidth :Int){
+    fun setStrokeWidth(borderWidth: Int) {
         borderPaint.strokeWidth = borderWidth.toFloat()
     }
 
-    fun setStrokeColor(strokeColor :Int){
-        borderPaint.color  = strokeColor
+    fun setStrokeColor(strokeColor: Int) {
+        borderPaint.color = strokeColor
     }
 }

@@ -15,5 +15,6 @@
 
         <attr name="isLoop" format="boolean" />
         <attr name="android:fontFamily" />
+        <attr name="android:gravity" />
     </declare-styleable>
 </resources>

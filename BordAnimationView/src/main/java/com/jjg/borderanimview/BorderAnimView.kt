@@ -6,6 +6,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.util.AttributeSet
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -120,6 +121,15 @@ class BorderAnimView : RelativeLayout {
         if (fontFamilyId > 0)
             setFont(fontFamilyId)
 
+        //gravity 변경
+        var gravity =
+            typedArray.getInteger(R.styleable.BorderAnimView_android_gravity, Gravity.CENTER)
+        setGravityValue(gravity)
+
+        //loop
+        var isLoop = typedArray.getBoolean(R.styleable.BorderAnimView_isLoop, false)
+        setLoop(isLoop)
+
         typedArray.recycle()
     }
 
@@ -189,6 +199,12 @@ class BorderAnimView : RelativeLayout {
         tvMain.setBackgroundResource(resId)
     }
 
+    private fun setGravityValue(value: Int) {
+        tvMain.gravity = value
+    }
+    private fun setLoop(value: Boolean) {
+        borderView.isLoop = value
+    }
     private fun setFont(resId: Int) {
         tvMain.typeface = ResourcesCompat.getFont(context, resId)
     }
