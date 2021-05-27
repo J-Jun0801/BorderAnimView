@@ -130,6 +130,13 @@ class BorderAnimView : RelativeLayout {
         var isLoop = typedArray.getBoolean(R.styleable.BorderAnimView_isLoop, false)
         setLoop(isLoop)
 
+        var velocity =
+            typedArray.getDimensionPixelSize(
+                R.styleable.BorderAnimView_velocity,
+                DisplayUtil.dpToPx(context, 1).toInt()
+            )
+        setVelocity(velocity)
+
         typedArray.recycle()
     }
 
@@ -207,5 +214,8 @@ class BorderAnimView : RelativeLayout {
     }
     private fun setFont(resId: Int) {
         tvMain.typeface = ResourcesCompat.getFont(context, resId)
+    }
+    private fun setVelocity(value: Int) {
+        borderView.velocity = value
     }
 }

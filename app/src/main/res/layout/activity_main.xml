@@ -7,10 +7,12 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+<!--    <com.jjg.borderanimview.BorderAnimView-->
     <com.jjg.borderanimview.BorderAnimView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        app:velocity="10dp"
         app:isLoop="true"
         app:min_height="150dp"
         app:move_icon="@drawable/watch_yellow_ic"

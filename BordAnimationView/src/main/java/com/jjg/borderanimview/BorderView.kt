@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
-import com.jjg.borderanimview.R
 import com.jjg.borderanimview.util.DisplayUtil.Companion.dpToPx
 
 class BorderView : View {
@@ -24,7 +23,7 @@ class BorderView : View {
     private lateinit var pathMeasure: PathMeasure
     private var pathLength = 0f
 
-    private var step = 1f
+    var velocity = dpToPx(context, 1).toInt()
     private var distance = 0f
     private var pos: FloatArray = FloatArray(2)
     private var tan: FloatArray = FloatArray(2)
@@ -90,7 +89,7 @@ class BorderView : View {
                 (pos[0] - halfWidthMoveIcon) / 2,
                 (pos[1] - halfHeightMoveIcon) / 2
             )
-            distance += step
+            distance += this.velocity
             invalidate()
         } else {
             distance = 0f
