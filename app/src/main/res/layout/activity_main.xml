@@ -10,12 +10,13 @@
     <com.jjg.borderanimview.BorderAnimView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        app:move_icon="@drawable/watch_yellow_ic"
-        app:stroke_width="3dp"
-        app:stroke_color="#0083ff"
-        app:text="TEXTVIEW 영역"
+        android:layout_gravity="center"
+        app:isLoop="true"
         app:min_height="150dp"
-        app:text_size="10dp"
+        app:move_icon="@drawable/watch_yellow_ic"
+        app:stroke_color="#0083ff"
+        app:stroke_width="3dp"
+        app:text="TEXTVIEW 영역"
         app:text_color="#0083ff"
-        />
+        app:text_size="10dp" />
 </LinearLayout>
